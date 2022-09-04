@@ -20,7 +20,7 @@ if prot_pdb_uploaded is not None:
  
    
 pdbview = py3Dmol.view()
-pdbview.addModel(open('1tqn.pdb', 'r').read(),'pdb')
+pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
 pdbview.setStyle({'cartoon':{}})
 showmol(pdbview, height = 500,width=800)
 #lines=open(prot_pdb_name, 'r').read()
