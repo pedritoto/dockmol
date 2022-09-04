@@ -14,17 +14,12 @@ if prot_pdb_uploaded is not None:
         #mol = pybel.readfile("pdb",prot_pdb_name)
         # 1A2C
         # Structure of thrombin inhibited by AERUGINOSIN298-A from a BLUE-GREEN ALGA
-    pdbview = py3Dmol.view() 
-    pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
-    pdbview.setStyle({'stick':{}})
-    showmol(pdbview, height = 500,width=800)
-
-
-xyzview = py3Dmol.view(query='pdb:1A2C') 
-xyzview.setStyle({'cartoon':{'color':'spectrum'}})
-showmol(xyzview, height = 500,width=800)
-
-
+ 
+   
+pdbview = py3Dmol.view()
+pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
+pdbview.setStyle({'stick':{}})
+showmol(pdbview, height = 500,width=800)
 
 import subprocess
 subprocess.call('cat /app/dockmol/water.pdb', shell=True)
