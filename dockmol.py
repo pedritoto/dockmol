@@ -17,10 +17,10 @@ if prot_pdb_uploaded is not None:
  
    
 pdbview = py3Dmol.view()
-pdbview.addModel(open(prot_pdb_name, 'r').readlines(),'pdb')
-pdbview.setStyle({'stick':{}})
+pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
+pdbview.setStyle({'ball':{}})
 showmol(pdbview, height = 500,width=800)
-lines=open(prot_pdb_name, 'r').readlines()
+lines=open(prot_pdb_name, 'r').read()
 lines
 
 
