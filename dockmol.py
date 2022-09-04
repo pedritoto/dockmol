@@ -31,7 +31,7 @@ with st.sidebar:
             with open(prot_pdb_name,'wb') as f:
                 f.write(prot_pdb_uploaded.getbuffer())  
             prot_pdb_content = open(prot_pdb_name, 'r').read()
-            prot_pdf_content
+            prot_pdb_content
             #subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
             #print(prot_pdb_file)
 
