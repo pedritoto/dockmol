@@ -27,7 +27,10 @@ with st.sidebar:
                 with open(prot_pdb_name,'w') as f:
                     print(prot_pdb_content,file=f)
                     st.success(prot_pdb_name+' created succesfully')
-                    prot_show=st.button('Show protein', key=None, help='displays 3D model of protein', on_click=None, args=None, kwargs=None, disabled=False)
+                    if prot_show:
+                        prot_show=st.button('Hide protein', key=None, help='Hides 3D model of protein', on_click=None, args=None, kwargs=None, disabled=False)
+                    else:    
+                        prot_show=st.button('Show protein', key=None, help='displays 3D model of protein', on_click=None, args=None, kwargs=None, disabled=False)
                     
 
 
@@ -39,7 +42,11 @@ with st.sidebar:
                 with open(prot_pdb_name,'wb') as f:
                     f.write(prot_pdb_uploaded.getbuffer()) 
                     st.success(prot_pdb_name+' created sussesfully')
-                    prot_show=st.button('Show protein', key=None, help='displays 3D model of protein', on_click=None, args=None, kwargs=None, disabled=False)
+                    if prot_show:
+                        prot_show=st.button('Hide protein', key=None, help='Hides 3D model of protein', on_click=None, args=None, kwargs=None, disabled=False)
+                    else:    
+                        prot_show=st.button('Show protein', key=None, help='displays 3D model of protein', on_click=None, args=None, kwargs=None, disabled=False)
+                    
 
     with st.expander("Ligand"):         
         lig_pdb_uploaded=st.file_uploader("Upload PDB file", type='pdb', accept_multiple_files=False, key='lu', help=None, on_change=None, args=None, kwargs=None, disabled=False)
@@ -48,7 +55,11 @@ with st.sidebar:
             with open(lig_pdb_name,'wb') as f:
                 f.write(lig_pdb_uploaded.getbuffer()) 
                 st.success(lig_pdb_name+' creado')
-                lig_show=st.button('Show molecule', key=None, help='displays 3D model of ligand', on_click=None, args=None, kwargs=None, disabled=False)
+                if lig_show:
+                    lig_show=st.button('Hide ligand', key=None, help='Hides 3D model of ligand', on_click=None, args=None, kwargs=None, disabled=False)
+                else:    
+                    lig_show=st.button('Show ligand', key=None, help='displays 3D model of ligand', on_click=None, args=None, kwargs=None, disabled=False)
+                #lig_show=st.button('Show molecule', key=None, help='displays 3D model of ligand', on_click=None, args=None, kwargs=None, disabled=False)
  
    
 
