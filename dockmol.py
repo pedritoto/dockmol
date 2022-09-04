@@ -15,10 +15,11 @@ with st.sidebar:
     prot_pdb_or = st.selectbox("Elige origen del archivo pdb?",("PDB ID", "From PC"))
     if prot_pdb_or == "PDB ID":
         prot_pdb_id=st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
-        prot_pdb_name=prot_pdb_id+'.pdb'
-        st.write('---------',prot_pdb_name)
-        prot_pdb_content = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
-        print(prot_pdb_content,file=prot_pdb_name)
+        if prot_pdb_id is not '':
+            prot_pdb_name=prot_pdb_id+'.pdb'
+            st.write('---------',prot_pdb_name)
+            prot_pdb_content = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
+            print(prot_pdb_content,file=prot_pdb_name)
 
  #       if prot_pdb_id is not '':
  #           pdbview = py3Dmol.view(query='pdb:'+prot_pdb_id) 
