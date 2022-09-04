@@ -6,8 +6,7 @@ prot_pdb_uploaded=st.file_uploader("sube pdb", type='pdb', accept_multiple_files
 if prot_pdb_uploaded is not None:
     with open(prot_pdb_uploaded.name,'wb') as prot_pdb_name:
         prot_pdb_name.write(prot_pdb_uploaded.getbuffer())
-
-mol = pybel.readfile("pdb",prot_pdb_name)
+        mol = pybel.readfile("pdb",prot_pdb_name)
 import subprocess
 
 cmd = "pwd "
