@@ -2,15 +2,12 @@ import streamlit as st
 from openbabel import pybel
 st.title("inicio")     
 from io import StringIO
-fileup=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=True, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
-#if fileup is not None:
-#    stringio = StringIO(fileup.getvalue().decode("utf-8"))
-#    st.write(stringio)
-for uploaded_file in fileup:
-    bytes_data = uploaded_file.readlines()
-    st.write("filename:", uploaded_file.name)
-    with open(uploaded_file.name,'wb') as f:
-        f.write(uploaded_file.getbuffer())
+prot_pdb=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=True, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
+if prot_pdb is not None:
+#    bytes_data = fileup.readlines()
+#    st.write("filename:", uploaded_file.name)
+    with open(prot_pdb.name,'wb') as f:
+        f.write(prot_pdb.getbuffer())
     #print('------------',bytes_data) #, file=uploaded_file.name)
 
 #mol = pybel.readfile("pdb",uploaded_file.name)
