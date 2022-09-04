@@ -9,11 +9,12 @@ subprocess.call('rm /app/dockmol/*.pdb', shell=True)
 
 st.title("inicio")     
 # Using object notation
-add_selectbox = st.sidebar.selectbox(
+prot_pdb_or = st.sidebar.selectbox(
     "Elige origen del archivo pdb?",
     ("PDB ID", "From PC")
 )
-
+if prot_pdb_or == "PDB ID":
+    st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
 
 
 
