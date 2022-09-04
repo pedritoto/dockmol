@@ -11,8 +11,8 @@ st.title("inicio")
 # Using object notation
 prot_pdb_name=''
 prot_pdb_id=''
-prot_show = None
-lig_show = None
+prot_show = False
+lig_show = False
 
 
 with st.sidebar:
@@ -28,6 +28,7 @@ with st.sidebar:
                     print(prot_pdb_content,file=f)
                     st.success(prot_pdb_name+' created succesfully')
                     prot_show=st.button('Show protein', key=None, help='displays 3D model of protein', on_click=None, args=None, kwargs=None, disabled=False)
+                    
 
 
         else:
@@ -54,13 +55,13 @@ with st.sidebar:
 #lines=open(prot_pdb_name, 'r').read()
 #lines
 
-if prot_show is not None:
+if prot_show:
     protview = py3Dmol.view()
     protview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
     protview.setStyle({'cartoon':{'color':'spectrum'}})
     protview.zoomTo()
     showmol(protview, height = 500,width=800)
-if lig_show is not None:
+if lig_show:
     ligview = py3Dmol.view()
     ligview.addModel(open(lig_pdb_name, 'r').read(),'pdb')
     ligview.setStyle({'licorice':{}})
