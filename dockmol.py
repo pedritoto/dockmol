@@ -3,7 +3,7 @@ from openbabel import pybel
 st.title("inicio")     
 from io import StringIO
 file=st.file_uploader("sube pdb", type=None, accept_multiple_files=True, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
-if file not None:
+if file is not None:
     stringio = StringIO(file.getvalue().decode("utf-8"))
     st.write(stringio)
 
