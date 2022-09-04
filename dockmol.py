@@ -56,4 +56,5 @@ with st.sidebar:
 subprocess.call('ls /app/dockmol/', shell=True)
 subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
 subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
-subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
+if prot_pdb_name is not None:
+    subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
