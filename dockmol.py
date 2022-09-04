@@ -75,7 +75,7 @@ if prot_show:
 if lig_show:
     ligview = py3Dmol.view()
     ligview.addModel(open(lig_pdb_name, 'r').read(),'pdb')
-    ligview.setStyle({'licorice':{}})
+    ligview.setStyle({'stick':{}})
     ligview.zoomTo()
     showmol(ligview, height = 500,width=800)
 
