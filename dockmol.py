@@ -25,4 +25,5 @@ showmol(pdbview, height = 500,width=800)
 
 
 import subprocess
-subprocess.call('cat /app/dockmol/1tqn.pdb', shell=True)
+#subprocess.call('cat /app/dockmol/1tqn.pdb', shell=True)
+subprocess.call('ls /app/dockmol/', shell=True)
