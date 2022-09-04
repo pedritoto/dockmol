@@ -9,16 +9,16 @@ subprocess.call('rm /app/dockmol/*.pdb', shell=True)
 
 st.title("inicio")     
 # Using object notation
-prot_pdb_or = st.sidebar.selectbox(
-    "Elige origen del archivo pdb?",
-    ("PDB ID", "From PC")
-)
-if prot_pdb_or == "PDB ID":
-    st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+
+
 
 
 
 with st.sidebar:
+    prot_pdb_or = st.selectbox("Elige origen del archivo pdb?",("PDB ID", "From PC"))
+    if prot_pdb_or == "PDB ID":
+        st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+
     prot_pdb_uploaded=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
     if prot_pdb_uploaded is not None:
         prot_pdb_name=prot_pdb_uploaded.name
