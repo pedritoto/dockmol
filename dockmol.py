@@ -31,12 +31,14 @@ with st.sidebar:
             with open(prot_pdb_name,'wb') as f:
                 f.write(prot_pdb_uploaded.getbuffer())  
             prot_pdb_file = open(prot_pdb_name, 'r').read()
+            subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
             print(prot_pdb_file)
-  #          pdbview = py3Dmol.view()
-  #          pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
-  #          pdbview.setStyle({'stick':{}})
-  #          pdbview.zoomTo()
-  #          showmol(pdbview, height = 500,width=800)
+
+#          pdbview = py3Dmol.view()
+#          pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
+#          pdbview.setStyle({'stick':{}})
+#          pdbview.zoomTo()
+#          showmol(pdbview, height = 500,width=800)
  
    
 
