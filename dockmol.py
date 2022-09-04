@@ -23,32 +23,17 @@ with st.sidebar:
                 prot_pdb_content = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
                 with open(prot_pdb_name,'w') as f:
                     print(prot_pdb_content,file=f)
-                subprocess.call('echo ++++++++++++  FROM RSCB   ++++++++++++++', shell=True)
-                subprocess.call('head /app/dockmol/'+prot_pdb_name, shell=True)
-                subprocess.call('echo ---------------------------------------', shell=True)
-                subprocess.call('ls /app/dockmol/', shell=True)
-                subprocess.call('echo -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-', shell=True)
+                    st.success(prot_pdb_name+' creado', icon:"✅")
 
- #       if prot_pdb_id is not '':
- #           pdbview = py3Dmol.view(query='pdb:'+prot_pdb_id) 
- #           pdbview.setStyle({'cartoon':{'color':'spectrum'}})
- #           pdbview.zoomTo()
- #           showmol(pdbview, height = 500,width=800)
+
         else:
             prot_pdb_uploaded=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
             if prot_pdb_uploaded is not None:
                 prot_pdb_name=prot_pdb_uploaded.name
                 with open(prot_pdb_name,'wb') as f:
                     f.write(prot_pdb_uploaded.getbuffer()) 
-                subprocess.call('echo ++++++++++++ SUBIDO ++++++++++++++++++', shell=True)
-                subprocess.call('head /app/dockmol/'+prot_pdb_name, shell=True)
-                subprocess.call('echo ---------------------------------------', shell=True)
-                subprocess.call('ls /app/dockmol/', shell=True)
-                subprocess.call('echo -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-', shell=True)                 
-            #prot_pdb_content = open(prot_pdb_name, 'r').read()
-            #prot_pdb_content
-            #subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
-            #print(prot_pdb_file)
+                    st.success(prot_pdb_name+' creado', icon:"✅")
+             
 
 #          pdbview = py3Dmol.view()
 #          pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
@@ -69,3 +54,8 @@ with st.sidebar:
 #subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
 #if prot_pdb_name != '':
 #    subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
+#                subprocess.call('echo ++++++++++++ SUBIDO ++++++++++++++++++', shell=True)
+#                subprocess.call('head /app/dockmol/'+prot_pdb_name, shell=True)
+#                subprocess.call('echo ---------------------------------------', shell=True)
+#                subprocess.call('ls /app/dockmol/', shell=True)
+#                subprocess.call('echo -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-', shell=True)    
