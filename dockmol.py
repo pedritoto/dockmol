@@ -57,6 +57,7 @@ if prot_show:
     protview = py3Dmol.view()
     protview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
     protview.setStyle({'cartoon':{'color':'spectrum'}})
+    protview.setStyle({'stick':{'color':'spectrum'}})
     protview.zoomTo()
     showmol(protview, height = 500,width=800)
 if lig_show:
