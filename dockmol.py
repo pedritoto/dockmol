@@ -11,6 +11,8 @@ st.title("inicio")
 # Using object notation
 prot_pdb_name=''
 prot_pdb_id=''
+prot_show = None
+lig_show = None
 
 
 with st.sidebar:
