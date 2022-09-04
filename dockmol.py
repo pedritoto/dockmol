@@ -12,7 +12,7 @@ for uploaded_file in fileup:
     st.write(bytes_data)
 #file=st.file_uploader("sube pdb", type=None, accept_multiple_files=True, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
 st.write(fileup)
-#mol = pybel.readfile("pdb", "water.pdb")
+mol = pybel.readfile("pdb",bytes_data)
 import subprocess
 
 cmd = "pwd "
