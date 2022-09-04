@@ -19,7 +19,8 @@ with st.sidebar:
         if prot_pdb_or == "PDB ID":
             prot_pdb_id=st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
             if prot_pdb_id != '':
-                prot_pdb_name=prot_pdb_id+'.pdb'
+                #prot_pdb_name=prot_pdb_id+'.pdb'
+                prot_pdb_name='protein.pdb'
                 prot_pdb_content = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
                 with open(prot_pdb_name,'w') as f:
                     print(prot_pdb_content,file=f)
@@ -29,7 +30,8 @@ with st.sidebar:
         else:
             prot_pdb_uploaded=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
             if prot_pdb_uploaded is not None:
-                prot_pdb_name=prot_pdb_uploaded.name
+                #prot_pdb_name=prot_pdb_uploaded.name
+                prot_pdb_name='protein.pdb'
                 with open(prot_pdb_name,'wb') as f:
                     f.write(prot_pdb_uploaded.getbuffer()) 
                     st.success(prot_pdb_name+' creado')
