@@ -16,17 +16,16 @@ with st.sidebar:
     if prot_pdb_or == "PDB ID":
         prot_pdb_id=st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
     else:
-        prot_pdb_uploaded=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
-            if prot_pdb_uploaded is not None:
-                prot_pdb_name=prot_pdb_uploaded.name
-                with open(prot_pdb_name,'wb') as f:
-                    f.write(prot_pdb_uploaded.getbuffer())
-        #mol = pybel.readfile("pdb",prot_pdb_name)
-            pdbview = py3Dmol.view()
-            pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
-            pdbview.setStyle({'stick':{}})
-            pdbview.zoomTo()
-            showmol(pdbview, height = 500,width=800)
+    prot_pdb_uploaded=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
+    if prot_pdb_uploaded is not None:
+        prot_pdb_name=prot_pdb_uploaded.name
+        with open(prot_pdb_name,'wb') as f:
+            f.write(prot_pdb_uploaded.getbuffer())
+        pdbview = py3Dmol.view()
+        pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
+        pdbview.setStyle({'stick':{}})
+        pdbview.zoomTo()
+        showmol(pdbview, height = 500,width=800)
  
    
 
