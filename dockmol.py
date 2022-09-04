@@ -8,5 +8,5 @@ import subprocess
 
 cmd = "ls "
 
-returned_value = subprocess.call(cmd, shell=True)
-returned_value
+subprocess.call(cmd, shell=True)
+
