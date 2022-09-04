@@ -38,12 +38,11 @@ with st.sidebar:
 
     with st.expander("Ligand"):         
         lig_pdb_uploaded=st.file_uploader("Upload PDB file", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
-            if lig_pdb_uploaded is not None:
-                #prot_pdb_name=prot_pdb_uploaded.name
-                lig_pdb_name='ligand.pdb'
-                with open(lig_pdb_name,'wb') as f:
-                    f.write(lig_pdb_uploaded.getbuffer()) 
-                    st.success(lig_pdb_name+' creado')
+        if lig_pdb_uploaded is not None:
+            lig_pdb_name='ligand.pdb'
+            with open(lig_pdb_name,'wb') as f:
+                f.write(lig_pdb_uploaded.getbuffer()) 
+                st.success(lig_pdb_name+' creado')
 
  
    
