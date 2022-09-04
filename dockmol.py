@@ -14,7 +14,7 @@ prot_pdb_id=''
 
 
 with st.sidebar:
-    with st.expander("Prtotein"):
+    with st.expander("Protein"):
         prot_pdb_or = st.selectbox("Elige origen del archivo pdb?",("PDB ID", "From PC"))
         if prot_pdb_or == "PDB ID":
             prot_pdb_id=st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
