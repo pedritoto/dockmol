@@ -25,4 +25,4 @@ if prot_pdb_uploaded is not None:
 
 
 import subprocess
-subprocess.call('ls /app/dockmol/', shell=True)
+subprocess.call('cat /app/dockmol/water.pdb', shell=True)
