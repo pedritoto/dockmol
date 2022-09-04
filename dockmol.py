@@ -11,7 +11,7 @@ for uploaded_file in fileup:
     st.write("filename:", uploaded_file.name)
     #st.write(bytes_data)
     bytes_data
-    print(bytes_data, file=uploaded_file.name)
+    print(bytes_data) #, file=uploaded_file.name)
 
 #mol = pybel.readfile("pdb",uploaded_file.name)
 import subprocess
