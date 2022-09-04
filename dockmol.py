@@ -4,6 +4,9 @@ from openbabel import pybel
 from stmol import showmol
 import py3Dmol
 
+import subprocess
+subprocess.call('rm /app/dockmol/*.pdb', shell=True)
+
 st.title("inicio")     
 from io import StringIO
 prot_pdb_uploaded=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
@@ -24,6 +27,6 @@ showmol(pdbview, height = 500,width=800)
 #lines
 
 
-import subprocess
+
 #subprocess.call('cat /app/dockmol/1tqn.pdb', shell=True)
 subprocess.call('ls /app/dockmol/', shell=True)
