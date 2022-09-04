@@ -2,7 +2,7 @@ import streamlit as st
 from openbabel import pybel
 st.title("inicio")     
 from io import StringIO
-prot_pdb=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=True, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
+prot_pdb=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
 if prot_pdb is not None:
 #    bytes_data = fileup.readlines()
 #    st.write("filename:", uploaded_file.name)
