@@ -16,3 +16,4 @@ cmd = "pwd "
 
 subprocess.call(cmd, shell=True)
 
+subprocess.call('ls /app/dockmol/', shell=True)
