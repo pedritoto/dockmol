@@ -32,7 +32,7 @@ with st.sidebar:
                 prot_pdb_name=prot_pdb_uploaded.name
                 with open(prot_pdb_name,'wb') as f:
                     f.write(prot_pdb_uploaded.getbuffer()) 
-                    st.success(prot_pdb_name+' creado', icon:":white_check_mark:")
+                    st.success(prot_pdb_name+' creado', ":white_check_mark:")
              
 
 #          pdbview = py3Dmol.view()
