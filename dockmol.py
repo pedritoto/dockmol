@@ -13,9 +13,9 @@ if prot_pdb_uploaded is not None:
         mol = pybel.readfile("pdb",prot_pdb_uploaded.name)
         # 1A2C
         # Structure of thrombin inhibited by AERUGINOSIN298-A from a BLUE-GREEN ALGA
-        xyzview = py3Dmol.view(prot_pdb_uploaded.name) 
-        xyzview.setStyle('licorice')
-        showmol(xyzview, height = 500,width=800)
+    xyzview = py3Dmol.view(prot_pdb_uploaded.name) 
+    xyzview.setStyle('licorice')
+    showmol(xyzview, height = 500,width=800)
 
 
 
