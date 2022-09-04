@@ -9,7 +9,7 @@ subprocess.call('rm /app/dockmol/*.pdb', shell=True)
 
 st.title("inicio")     
 # Using object notation
-
+prot_pdb_name=''
 
 with st.sidebar:
     prot_pdb_or = st.selectbox("Elige origen del archivo pdb?",("PDB ID", "From PC"))
@@ -56,5 +56,5 @@ with st.sidebar:
 subprocess.call('ls /app/dockmol/', shell=True)
 subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
 subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
-if prot_pdb_name is not None:
+if prot_pdb_name is not '':
     subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
