@@ -16,10 +16,10 @@ if prot_pdb_uploaded is not None:
         # Structure of thrombin inhibited by AERUGINOSIN298-A from a BLUE-GREEN ALGA
  
    
-#pdbview = py3Dmol.view()
-#pdbview.addModel(open(prot_pdb_namem, 'r').read(),'pdb')
-#pdbview.setStyle({'stick':{}})
-#showmol(pdbview, height = 500,width=800)
+pdbview = py3Dmol.view()
+pdbview.addModel(open(prot_pdb_namem, 'r').readlines(),'pdb')
+pdbview.setStyle({'stick':{}})
+showmol(pdbview, height = 500,width=800)
 lines=open(prot_pdb_name, 'r').readlines()
 lines
 
