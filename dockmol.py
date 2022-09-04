@@ -8,7 +8,7 @@ fileup=st.file_uploader("sube pdb", type=None, accept_multiple_files=True, key=N
 #    st.write(stringio)
 for uploaded_file in fileup:
     bytes_data = uploaded_file.read()
-    st.write(“filename:”, uploaded_file.name)
+    st.write("filename:", uploaded_file.name)
     st.write(bytes_data)
 #file=st.file_uploader("sube pdb", type=None, accept_multiple_files=True, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
 st.write(fileup)
