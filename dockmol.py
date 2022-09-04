@@ -20,7 +20,7 @@ with st.sidebar:
             st.write('---------',prot_pdb_name)
             prot_pdb_content = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
             with open(prot_pdb_name,'wb') as f:
-                #print(prot_pdb_content)
+                print(prot_pdb_content.getvalue(),file=f)
                 subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
 
  #       if prot_pdb_id is not '':
@@ -34,8 +34,8 @@ with st.sidebar:
             prot_pdb_name=prot_pdb_uploaded.name
             with open(prot_pdb_name,'wb') as f:
                 f.write(prot_pdb_uploaded.getbuffer())  
-            prot_pdb_content = open(prot_pdb_name, 'r').read()
-            prot_pdb_content
+            #prot_pdb_content = open(prot_pdb_name, 'r').read()
+            #prot_pdb_content
             #subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
             #print(prot_pdb_file)
 
