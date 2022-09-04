@@ -18,11 +18,11 @@ if prot_pdb_uploaded is not None:
    
 pdbview = py3Dmol.view()
 pdbview.addModel(open('water.pdb', 'r').read(),'pdb')
-pdbview.setStyle({'ball':{}})
+pdbview.setStyle({'cartoon':{}})
 showmol(pdbview, height = 500,width=800)
-lines=open(prot_pdb_name, 'r').read()
-lines
+#lines=open(prot_pdb_name, 'r').read()
+#lines
 
 
 import subprocess
-subprocess.call('cat /app/dockmol/water.pdb', shell=True)
+subprocess.call('cat /app/dockmol/1tqn.pdb', shell=True)
