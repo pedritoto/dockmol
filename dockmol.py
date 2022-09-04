@@ -3,7 +3,7 @@ from openbabel import pybel
 
 from stmol import showmol
 import py3Dmol
-
+from pypdb import *
 import subprocess
 subprocess.call('rm /app/dockmol/*.pdb', shell=True)
 
