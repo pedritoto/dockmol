@@ -63,8 +63,8 @@ with st.sidebar:
 
 
 #subprocess.call('cat /app/dockmol/1tqn.pdb', shell=True)
-subprocess.call('ls /app/dockmol/', shell=True)
-subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
-subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
+#subprocess.call('ls /app/dockmol/', shell=True)
+#subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
+#subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
 #if prot_pdb_name != '':
 #    subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
