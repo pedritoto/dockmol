@@ -16,8 +16,8 @@ with st.sidebar:
     if prot_pdb_or == "PDB ID":
         prot_pdb_id=st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
         st.write('---------',prot_pdb_id)
-        subprocess.call('wget https://files.rcsb.org/download/'+prot_pdb_id+'.pdb', shell=True)
-        
+        prot_pdb_file = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
+
  #       if prot_pdb_id is not '':
  #           pdbview = py3Dmol.view(query='pdb:'+prot_pdb_id) 
  #           pdbview.setStyle({'cartoon':{'color':'spectrum'}})
@@ -29,6 +29,7 @@ with st.sidebar:
             prot_pdb_name=prot_pdb_uploaded.name
             with open(prot_pdb_name,'wb') as f:
                 f.write(prot_pdb_uploaded.getbuffer())  
+            prot_pdb_file = open(prot_pdb_name, 'r').read()
   #          pdbview = py3Dmol.view()
   #          pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
   #          pdbview.setStyle({'stick':{}})
@@ -36,7 +37,7 @@ with st.sidebar:
   #          showmol(pdbview, height = 500,width=800)
  
    
-
+st.write(prot_pdb_file)
 #lines=open(prot_pdb_name, 'r').read()
 #lines
 
