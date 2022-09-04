@@ -31,7 +31,7 @@ with st.sidebar:
 
 
         else:
-            prot_pdb_uploaded=st.file_uploader("Upload PDB file", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
+            prot_pdb_uploaded=st.file_uploader("Upload PDB file", type='pdb', accept_multiple_files=False, key='pu', help=None, on_change=None, args=None, kwargs=None, disabled=False)
             if prot_pdb_uploaded is not None:
                 #prot_pdb_name=prot_pdb_uploaded.name
                 prot_pdb_name='protein.pdb'
@@ -41,7 +41,7 @@ with st.sidebar:
                     prot_show=st.button('Show protein', key=None, help='displays 3D model of protein', on_click=None, args=None, kwargs=None, disabled=False)
 
     with st.expander("Ligand"):         
-        lig_pdb_uploaded=st.file_uploader("Upload PDB file", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
+        lig_pdb_uploaded=st.file_uploader("Upload PDB file", type='pdb', accept_multiple_files=False, key='lu', help=None, on_change=None, args=None, kwargs=None, disabled=False)
         if lig_pdb_uploaded is not None:
             lig_pdb_name='ligand.pdb'
             with open(lig_pdb_name,'wb') as f:
