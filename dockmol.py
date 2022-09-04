@@ -25,7 +25,7 @@ with st.sidebar:
         if prot_pdb_uploaded is not None:
             prot_pdb_name=prot_pdb_uploaded.name
             with open(prot_pdb_name,'wb') as f:
-                f.write(prot_pdb_uploaded.getbuffer())
+                f.write(prot_pdb_uploaded.getbuffer())  
             pdbview = py3Dmol.view()
             pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
             pdbview.setStyle({'stick':{}})
