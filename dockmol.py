@@ -1,6 +1,8 @@
 import streamlit as st
 from openbabel import pybel
 st.title("inicio")     
+from io import StringIO
+
 stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
 st.write(stringio)
 
