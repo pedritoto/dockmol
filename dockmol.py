@@ -15,6 +15,7 @@ with st.sidebar:
     prot_pdb_or = st.selectbox("Elige origen del archivo pdb?",("PDB ID", "From PC"))
     if prot_pdb_or == "PDB ID":
         prot_pdb_id=st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
+        st.write('---------',prot_pdb_id)
         if prot_pdb_id is not None:
             pdbview = py3Dmol.view(query='pdb:'+prot_pdb_id) 
             pdbview.setStyle({'cartoon':{'color':'spectrum'}})
