@@ -20,7 +20,7 @@ with st.sidebar:
             st.write('---------',prot_pdb_name)
             prot_pdb_content = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
             with open(prot_pdb_name,'wb') as f:
-                f.write(prot_pdb_content)
+                print(prot_pdb_content,file=f)
 
  #       if prot_pdb_id is not '':
  #           pdbview = py3Dmol.view(query='pdb:'+prot_pdb_id) 
