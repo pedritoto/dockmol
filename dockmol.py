@@ -17,6 +17,7 @@ with st.sidebar:
         prot_pdb_id=st.text_input('PDB ID', value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder=None, disabled=False)
         st.write('---------',prot_pdb_id)
         prot_pdb_file = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
+        st.write(prot_pdb_file)
 
  #       if prot_pdb_id is not '':
  #           pdbview = py3Dmol.view(query='pdb:'+prot_pdb_id) 
@@ -30,6 +31,7 @@ with st.sidebar:
             with open(prot_pdb_name,'wb') as f:
                 f.write(prot_pdb_uploaded.getbuffer())  
             prot_pdb_file = open(prot_pdb_name, 'r').read()
+            st.write(prot_pdb_file)
   #          pdbview = py3Dmol.view()
   #          pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
   #          pdbview.setStyle({'stick':{}})
@@ -37,7 +39,7 @@ with st.sidebar:
   #          showmol(pdbview, height = 500,width=800)
  
    
-st.write(prot_pdb_file)
+
 #lines=open(prot_pdb_name, 'r').read()
 #lines
 
