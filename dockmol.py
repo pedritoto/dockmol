@@ -73,15 +73,5 @@ if lig_show:
 subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
 subprocess.call('echo +++++++++++++++++++++++++++++++++++++++', shell=True)
 subprocess.call('ls /app/dockmol/', shell=True)
-#if prot_pdb_name != '':
-#    subprocess.call('cat /app/dockmol/'+prot_pdb_name, shell=True)
-#                subprocess.call('echo ++++++++++++ SUBIDO ++++++++++++++++++', shell=True)
-#                subprocess.call('head /app/dockmol/'+prot_pdb_name, shell=True)
-#                subprocess.call('echo ---------------------------------------', shell=True)
-#                subprocess.call('ls /app/dockmol/', shell=True)
-#                subprocess.call('echo -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-', shell=True)    
-#          pdbview = py3Dmol.view()
-#          pdbview.addModel(open(prot_pdb_name, 'r').read(),'pdb')
-#          pdbview.setStyle({'stick':{}})
-#          pdbview.zoomTo()
-#          showmol(pdbview, height = 500,width=800)
+
+
