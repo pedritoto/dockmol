@@ -33,6 +33,7 @@ with st.sidebar:
                 with open(prot_pdb_name,'wb') as f:
                     f.write(prot_pdb_uploaded.getbuffer()) 
                     st.success(prot_pdb_name)
+                    st.write(prot_pdb_name)
              
 
 #          pdbview = py3Dmol.view()
