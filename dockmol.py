@@ -23,7 +23,7 @@ with st.sidebar:
                 prot_pdb_content = get_pdb_file(prot_pdb_id, filetype='pdb', compression=False)
                 with open(prot_pdb_name,'w') as f:
                     print(prot_pdb_content,file=f)
-                    st.success(prot_pdb_name+' creado', icon:":white_check_mark:")
+                    st.success(prot_pdb_name+' creado', ":white_check_mark:")
 
 
         else:
