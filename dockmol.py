@@ -8,6 +8,15 @@ import subprocess
 subprocess.call('rm /app/dockmol/*.pdb', shell=True)
 
 st.title("inicio")     
+# Using object notation
+add_selectbox = st.sidebar.selectbox(
+    "Elige origen del archivo pdb?",
+    ("PDB ID", "From PC")
+)
+
+
+
+
 with st.sidebar:
     prot_pdb_uploaded=st.file_uploader("sube pdb", type='pdb', accept_multiple_files=False, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False)
     if prot_pdb_uploaded is not None:
