@@ -20,7 +20,7 @@ if prot_pdb_uploaded is not None:
 #pdbview.addModel(open(prot_pdb_namem, 'r').read(),'pdb')
 #pdbview.setStyle({'stick':{}})
 #showmol(pdbview, height = 500,width=800)
-lines=open(prot_pdb_name, 'r').read()
+lines=open(prot_pdb_name, 'r').readlines()
 lines
 
 
